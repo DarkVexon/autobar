@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://baqjbd8m7wwga"]
+
+[ext_resource type="Script" uid="uid://225rr6lvliii" path="res://SkillBar/skill_bar.gd" id="1_tk7p5"]
+[ext_resource type="Texture2D" uid="uid://tcs5b6iygdxm" path="res://SkillBar/pointer.png" id="2_0ygpv"]
+
+[node name="SkillBar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1658.0
+offset_bottom = -898.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tk7p5")
+
+[node name="SkillsContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 724.0
+offset_bottom = 135.0
+theme_override_constants/separation = 75
+
+[node name="Pointer" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -120.0
+offset_top = 87.0
+offset_right = -45.0
+offset_bottom = 162.0
+texture = ExtResource("2_0ygpv")

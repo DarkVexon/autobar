@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgsi77xs05w51"]
+
+[ext_resource type="Script" uid="uid://bb1k5ikyp4thb" path="res://Skill/skill.gd" id="1_7l3xw"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ql11a"]
+load_path = "res://.godot/imported/skill_bg.png-6664134c44573b20fa6aaee95b5d5443.ctex"
+
+[node name="Skill" type="Control"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1820.0
+offset_bottom = -980.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7l3xw")
+
+[node name="Icon" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("CompressedTexture2D_ql11a")

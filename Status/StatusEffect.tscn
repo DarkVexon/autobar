@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://be1r0xr7oj6bu"]
+
+[ext_resource type="Script" uid="uid://nalkbxah1l1i" path="res://Status/status_effect.gd" id="1_ybvd1"]
+
+[node name="StatusEffect" type="Control"]
+custom_minimum_size = Vector2(400, 64)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1520.0
+offset_bottom = -1016.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ybvd1")
+
+[node name="Image" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = 3.0
+offset_right = 40.0
+offset_bottom = 43.0
+
+[node name="NameLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 3.0
+offset_right = 333.0
+offset_bottom = 45.0
+theme_override_font_sizes/font_size = 30
+text = "Super Duper Status"
+vertical_alignment = 1
+
+[node name="AmountLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 330.0
+offset_top = 6.0
+offset_right = 370.0
+offset_bottom = 41.0
+theme_override_font_sizes/font_size = 25
+text = "x5"

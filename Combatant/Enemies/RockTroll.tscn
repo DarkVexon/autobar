@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://bg512ef8cfb2n"]
+
+[ext_resource type="PackedScene" uid="uid://tfftn5pdg4sg" path="res://Combatant/Combatant.tscn" id="1_0avm3"]
+[ext_resource type="Script" uid="uid://dvlu8uhb03t35" path="res://Combatant/Enemies/RockTroll.gd" id="2_sa5nt"]
+[ext_resource type="Texture2D" uid="uid://dskfq0d4twpvn" path="res://Combatant/images/RockTroll.png" id="3_u0re8"]
+
+[node name="Combatant" instance=ExtResource("1_0avm3")]
+script = ExtResource("2_sa5nt")
+
+[node name="EnemyImg" parent="." index="0"]
+texture = ExtResource("3_u0re8")

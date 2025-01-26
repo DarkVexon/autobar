@@ -1,0 +1,196 @@
+[gd_scene load_steps=10 format=3 uid="uid://x3kwlgf0ulm2"]
+
+[ext_resource type="Script" uid="uid://c236hunb1f57x" path="res://main.gd" id="1_glv2v"]
+[ext_resource type="PackedScene" uid="uid://baqjbd8m7wwga" path="res://SkillBar/SkillBar.tscn" id="2_uu6xs"]
+[ext_resource type="Texture2D" uid="uid://bbb1e1rxw1pqs" path="res://uiImgs/progBackPlayer.png" id="3_3dxm6"]
+[ext_resource type="Texture2D" uid="uid://c2hgcyk6m8p8a" path="res://fightButton.png" id="3_r0du0"]
+[ext_resource type="Texture2D" uid="uid://c81inocuecb5e" path="res://uiImgs/progEmptyPlayer.png" id="4_lgr22"]
+[ext_resource type="Texture2D" uid="uid://c0uhvq0umoo4y" path="res://uiImgs/shieldImg.png" id="5_03owx"]
+[ext_resource type="Texture2D" uid="uid://px4yk1bgygqw" path="res://uiImgs/progFillPlayer.png" id="5_trn2v"]
+[ext_resource type="PackedScene" uid="uid://kjx47kpwpm1k" path="res://Tooltip/Tooltip.tscn" id="7_lgr22"]
+[ext_resource type="Script" uid="uid://bpw8b5jllxmv3" path="res://scroll_container.gd" id="8_trn2v"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_glv2v")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1918.0
+offset_bottom = 1077.0
+color = Color(0.76662, 0.76662, 0.76662, 1)
+
+[node name="MonsterContainer" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+
+[node name="PlayerHealthBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 804.0
+offset_right = 1018.0
+offset_bottom = 879.0
+max_value = 10.0
+value = 10.0
+texture_under = ExtResource("4_lgr22")
+texture_over = ExtResource("3_3dxm6")
+texture_progress = ExtResource("5_trn2v")
+
+[node name="PlayerHealthLabel" type="Label" parent="PlayerHealthBar"]
+layout_mode = 0
+offset_left = 127.0
+offset_top = 6.0
+offset_right = 854.0
+offset_bottom = 67.0
+theme_override_font_sizes/font_size = 40
+text = "10/10"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="PlayerBlockImg" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 1028.0
+offset_top = 804.0
+offset_right = 1103.0
+offset_bottom = 879.0
+texture = ExtResource("5_03owx")
+
+[node name="PlayerBlockAmtLabel" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 1034.0
+offset_top = 819.0
+offset_right = 1094.0
+offset_bottom = 865.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 33
+text = "158"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayerStatusContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 737.0
+offset_right = 1146.0
+offset_bottom = 824.0
+theme_override_constants/separation = 50
+
+[node name="StartCombatButton" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 785.0
+offset_top = -67.0
+offset_right = 1174.0
+offset_bottom = 241.0
+
+[node name="ButtonImage" type="TextureRect" parent="StartCombatButton"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = -1.0
+offset_right = 403.0
+offset_bottom = 299.0
+texture = ExtResource("3_r0du0")
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 1200.0
+offset_top = 744.0
+offset_right = 1883.0
+offset_bottom = 1049.0
+color = Color(0, 0, 0, 0.305882)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 1208.0
+offset_top = 754.0
+offset_right = 1874.0
+offset_bottom = 1029.0
+script = ExtResource("8_trn2v")
+
+[node name="LogContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+
+[node name="RewardTopper" type="Control" parent="."]
+anchors_preset = 0
+offset_top = -1080.0
+offset_right = 1920.0
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="RewardTopper"]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.654902, 1, 0.580392, 0.592157)
+
+[node name="RewardContainer" type="HBoxContainer" parent="RewardTopper"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 102.0
+offset_right = 1869.0
+offset_bottom = 1025.0
+theme_override_constants/separation = 650
+
+[node name="PlayerSkillBar" parent="." instance=ExtResource("2_uu6xs")]
+layout_mode = 1
+offset_left = 99.0
+offset_top = 892.0
+offset_right = 37.0
+offset_bottom = -52.0
+maxSkills = 6
+
+[node name="Tooltip" parent="." instance=ExtResource("7_lgr22")]
+layout_mode = 1
+offset_left = -852.0
+offset_top = -534.0
+offset_right = -2309.0
+offset_bottom = -1349.0
+metadata/_edit_lock_ = true
+
+[node name="DeathTopper" type="Control" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 0
+offset_right = 1919.0
+offset_bottom = 1077.0
+
+[node name="DeathOverlay" type="ColorRect" parent="DeathTopper"]
+layout_mode = 0
+offset_right = 1919.0
+offset_bottom = 1077.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="DeathTopper"]
+layout_mode = 0
+offset_left = 255.0
+offset_top = 41.0
+offset_right = 1624.0
+offset_bottom = 245.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 150
+text = "You died!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="DeathTopper"]
+layout_mode = 0
+offset_left = 294.0
+offset_top = 460.0
+offset_right = 1629.0
+offset_bottom = 978.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 250
+text = "Main Menu"
+
+[connection signal="pressed" from="StartCombatButton" to="." method="_on_start_combat_button_pressed"]
+[connection signal="pressed" from="DeathTopper/Button" to="." method="_on_button_pressed"]

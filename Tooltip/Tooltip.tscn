@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://kjx47kpwpm1k"]
+
+[ext_resource type="Script" uid="uid://b8wd0q0pr2tw5" path="res://Tooltip/tooltip.gd" id="1_0jmna"]
+
+[node name="Tooltip" type="Control"]
+custom_minimum_size = Vector2(463, 265)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1457.0
+offset_bottom = -815.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0jmna")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 462.0
+offset_bottom = 263.0
+
+[node name="NameLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 7.0
+offset_right = 452.0
+offset_bottom = 45.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Slash"
+horizontal_alignment = 1
+
+[node name="DescLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 53.0
+offset_right = 454.0
+offset_bottom = 253.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "Deal 3 (100% Strength) damage."
+autowrap_mode = 3

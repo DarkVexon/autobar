@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://bu1pwmjg5gkvq"]
+
+[ext_resource type="PackedScene" uid="uid://tfftn5pdg4sg" path="res://Combatant/Combatant.tscn" id="1_hhpib"]
+[ext_resource type="Script" uid="uid://2irt8shej0am" path="res://Combatant/Enemies/Bopper.gd" id="2_xbb4g"]
+
+[node name="Combatant" instance=ExtResource("1_hhpib")]
+script = ExtResource("2_xbb4g")

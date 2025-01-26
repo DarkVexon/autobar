@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://bieiun2jdbg5l"]
+
+[ext_resource type="PackedScene" uid="uid://tfftn5pdg4sg" path="res://Combatant/Combatant.tscn" id="1_rogq8"]
+[ext_resource type="Script" path="res://Combatant/Enemies/MeowkinArcher.gd" id="2_rogq8"]
+[ext_resource type="Texture2D" uid="uid://b1rmcx27ley0k" path="res://Combatant/images/MeowkinArcher.png" id="3_pwnk6"]
+
+[node name="Combatant" instance=ExtResource("1_rogq8")]
+script = ExtResource("2_rogq8")
+
+[node name="EnemyImg" parent="." index="0"]
+texture = ExtResource("3_pwnk6")

@@ -1,0 +1,7 @@
+res://Main.tscn
+res://Skill/skills/Burn.gd
+res://Combatant/Enemies/Clawkin.tscn
+res://SkillBar/SkillBar.tscn
+res://Combatant/Enemies/RockTroll.tscn
+res://Rewards/RewardItem.tscn
+res://SkillBar/skill_bar.gd

@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://exxvm5segns5"]
+
+[ext_resource type="PackedScene" uid="uid://tfftn5pdg4sg" path="res://Combatant/Combatant.tscn" id="1_kb1n0"]
+[ext_resource type="Script" uid="uid://duvypbn8pe15l" path="res://Combatant/Enemies/Clawkin.gd" id="2_jkokq"]
+[ext_resource type="Texture2D" uid="uid://eelvqyslu01n" path="res://Combatant/images/Clawkin.png" id="3_e8m17"]
+
+[node name="Combatant" instance=ExtResource("1_kb1n0")]
+script = ExtResource("2_jkokq")
+
+[node name="EnemyImg" parent="." index="0"]
+texture = ExtResource("3_e8m17")

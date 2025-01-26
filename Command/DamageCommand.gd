@@ -20,6 +20,8 @@ func _init(dmgAmt, newTarget, newSource, newType) -> void:
 
 func calculateHit():
 	var hitRate : int
+	if type == DamageType.HP_LOSS or source == null:
+		return true
 	if type == DamageType.PHYSICAL:
 		hitRate = 85
 	else:
@@ -31,5 +33,8 @@ func execute():
 	if calculateHit():
 		target.damage(amount, source, type)
 	else:
-		Globals.main.logToLog(null, source.combatantName + " missed!")
+		var name = "???"
+		if source != null:
+			name = source.combatantName
+		Globals.main.logToLog(null, name + " missed!")
 	completed = true
